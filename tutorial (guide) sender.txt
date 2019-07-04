@@ -1,0 +1,64 @@
+mkato Bcc sender v1.1
+
+Menu Create User :
+1. Length 	=> Panjang random kata yang diinginkan
+2. Type of random : 
+     1. chara => untuk random kata dan angka
+     2. number => untuk random angka saja
+3. Total	=> Banyak user yang mau dibuat
+
+
+Menu Random yang ada : 
+
+##type_mode_length##         => format untuk random function
+type : 
+1.  mix                            => untuk random angka & huruf
+2. number	     => untuk random angka
+3. text                            => untuk random huruf
+
+mode :
+1. upper                         => membuat semua huruf menjadi kapital
+2. lower                         => membuat semua huruf menjadi kecil
+3. normal                       => membuat huruf acak kapital / kecil
+
+length                            => panjang random
+
+
+contoh : 
+##mix_upper_7##  => akan menghasilkan : KsnP
+##mix_normal_6##  => akan menghasilkan : K4n2Pl
+
+random diatas sudah support di subject, letter, to, attachname, header!
+
+
+##randua## 		=> random useragent (LETTER ONLY)
+##randip##		=> random ip address (LETTER ONLY)
+##randcountry##		=> random country (LETTER ONLY)
+##randos##		=> random operating system (LETTER ONLY)
+##device##		=> random device (LETTER ONLY)
+##date##			=> date versi 1 (SUBJEK & LETTER)
+##date2##		=> date versi 2 (SUBJEK & LETTER)
+##date3##		=> date versi 3 (SUBJEK & LETTER)
+##date4##		=> date versi 3 (SUBJEK & LETTER)
+
+
+Special :
+
+1. special random untuk encrypt letter :
+	##mix_normal_10##		=> contoh tag random untuk letter(cocok untuk membuat random letter)
+	fungsi - dapat random kata tanpa ada yg sama (ngacak semua) 
+
+	membuat letter random : 
+	<FONT style="FONT-SIZE: 0px; COLOR: transparent">##mix_normal_10##</FONT>
+
+	sisipin code tersebut ke kata2 di letter contohnya :
+	Your Apple ID -> Your Ap<FONT style="FONT-SIZE: 0px; COLOR: transparent">##mix_normal_10##</FONT>ple <FONT style="FONT-SIZE: 0px; COLOR: transparent">##numstr##</FONT>ID
+
+2. special random link caranya :
+	1. isi link di config
+	2. ganti link diletter jadi ##link##
+
+
+3. custom header :
+	format : header|dataheader
+	contoh : x-senderip|127.0.0.1	
